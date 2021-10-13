@@ -26,8 +26,22 @@ class User:
             self.signup()
 
     def signin(self):
+        self.clear_console()
         print("Bu login qismi")
-        pass
+
+        self.input_old_email = input("Emailingizni kiriting: ").strip()
+        while self.input_old_email == "":
+            self.clear_console()
+            print("Invalid email please repeat")
+            self.input_old_email = input("Emailingizni kiriting: ").strip()
+
+        self.input_old_password = input("Passwordingizni kiriting: ").strip()
+        while self.input_old_password == "":
+            self.clear_console()
+            print("Invalid password please repeat")
+            self.input_old_password = input("Passwordingizni kiriting: ").strip()
+
+
 
     def signup(self):
         self.clear_console()
